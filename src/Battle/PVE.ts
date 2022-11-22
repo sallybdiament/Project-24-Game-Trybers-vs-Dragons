@@ -1,23 +1,26 @@
-import Fighter from '../Fighter';
+import Fighter, { SimpleFighter } from '../Fighter';
 import Monster from '../Monster';
 import Battle from './Battle';
 
 export default class PVE extends Battle {
-  private _monsters: Monster[];
-  constructor(player: Fighter, monsters: Monster[]) {
+  private _player2: Array< Monster | SimpleFighter>;
+  constructor(player: Fighter, player2: Array<Monster | SimpleFighter>) {
     super(player);
-    this._monsters = monsters;
+    this._player2 = player2;
   }
 
-  // eslint-disable-next-line sonarjs/cognitive-complexity
-  fight(): number {
-    for (let i = 0; i < this._monsters.length; i += 1) {
-      while (this.player.lifePoints > 0) {
-        this._monsters[i].attack(this.player);
-        this.player.attack(this._monsters[i]);
-        if (this._monsters[i].lifePoints === -1) break;
-      }
+  functionWhile(i: number) {
+    while (this.player.lifePoints > 0) {
+      this._player2[i].attack(this.player);
+      this.player.attack(this._player2[i]);
+      if (this._player2[i].lifePoints === -1) break;
     }
+  }
+  
+  fight(): number {
+    for (let i = 0; i < this._player2.length; i += 1) {
+      this.functionWhile(i);
+    }   
     return super.fight();
   }
 }
