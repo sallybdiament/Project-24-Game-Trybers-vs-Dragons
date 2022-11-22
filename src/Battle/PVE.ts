@@ -10,10 +10,10 @@ export default class PVE extends Battle {
   }
 
   functionWhile(i: number) {
-    while (this.player.lifePoints !== -1 && this._playe2[i].lifePoints !== -1) {
+    while (this.player.lifePoints > 0 && this._playe2[i].lifePoints > 0) {
       this._playe2[i].attack(this.player);
       this.player.attack(this._playe2[i]);
-      if (this._playe2[i].lifePoints === -1) break;
+      // if (this._playe2[i].lifePoints === -1) break;
     }
   }
   
