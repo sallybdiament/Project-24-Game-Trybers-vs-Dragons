@@ -13,6 +13,8 @@ export default class PVE extends Battle {
     while (this.player.lifePoints > 0 && this._playe2[i].lifePoints > 0) {
       this._playe2[i].attack(this.player);
       this.player.attack(this._playe2[i]);
+      console.log(this._playe2[i].lifePoints);
+      console.log(this.player.lifePoints);
       if (this._playe2[i].lifePoints === -1) break;
     }
   }
