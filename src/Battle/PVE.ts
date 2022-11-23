@@ -7,7 +7,6 @@ export default class PVE extends Battle {
   constructor(player: Fighter, player2: Array<Monster | SimpleFighter>) {
     super(player);
     this._playe2 = player2;
-    super.fight();
   }
   
   fight(): number {
@@ -19,6 +18,6 @@ export default class PVE extends Battle {
         console.log(this.player.lifePoints);
       }
     }   
-    return this.player.lifePoints === -1 ? -1 : 1;
+    return super.fight();
   }
 }

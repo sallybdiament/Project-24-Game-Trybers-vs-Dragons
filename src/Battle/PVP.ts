@@ -6,7 +6,6 @@ export default class PVP extends Battle {
   constructor(player: Fighter, player2: Fighter) {
     super(player);
     this._player2 = player2;
-    super.fight();
   }
 
   fight(): number {
@@ -16,7 +15,7 @@ export default class PVP extends Battle {
       console.log(this._player2.lifePoints);
       console.log(this.player.lifePoints);
     }
-    return this.player.lifePoints === -1 ? -1 : 1;
+    return super.fight();
   }
 }
 
