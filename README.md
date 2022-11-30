@@ -4,7 +4,7 @@ Projeto de um game de interpretação de papéis (RPG - Role Playing Game) com o
 
 Introduzindo os 4 pilares de POO: abstração, herança, encapsulamento e polimorfirmos. 
 
-Projeto 24 da [Trybe](https://wwww.betrybe.com), módulo de Back-End.
+Projeto 25 da [Trybe](https://wwww.betrybe.com), módulo de Back-End.
 
 ![Os 13 requisistos do projeto foram realizados com sucesso](/results.png)
 ## O Projeto
