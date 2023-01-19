@@ -17,7 +17,7 @@ Projeto 25 da [Trybe](https://wwww.betrybe.com), módulo de Back-End.
 
 #### 1- Clonar o repositório
 
-```git clone git@github.com:sallybdiament/Project-23-Blogs-API.git```
+```git clone git@github.com:sallybdiament/Project-25-Game-Trybers-vs-Dragons.git```
 #### 2 - Instalar as dependências
 
 No terminal do container: ```npm install```
